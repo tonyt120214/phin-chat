@@ -12,6 +12,11 @@ A modern AI chat assistant built with Streamlit, featuring conversation memory, 
 - 🎤 **Voice Features** - Text-to-speech and speech recognition (optional)
 - ⚡ **Streaming** - Real-time response streaming
 
+## 👥 Developers
+
+- **Lead Developer**: [Trye](https://github.com/ltrye)
+- **Owner**: [Tony](https://github.com/tonyt120214)
+
 ## Quick Start
 
 ### 1. Clone and Setup

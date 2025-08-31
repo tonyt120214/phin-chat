@@ -65,6 +65,34 @@ def render_sidebar():
             value=st.session_state.custom_system_prompt,
             height=100
         )
+        
+        st.divider()
+        
+        # Credits
+        st.subheader("📜 Credits")
+        st.markdown("""
+        **🐠 Phin AI Assistant**  
+        A modern AI chat assistant built with Streamlit
+        
+        **Built with:**  
+        • Streamlit  
+        • Groq API  
+        • Python  
+        
+        **Features:**  
+        • AI Chat with multiple models  
+        • Conversation memory  
+        • Chat history  
+        • Web search integration  
+        • Voice features  
+        • Beautiful dark theme  
+        
+        **Developer:**  
+        Created with ❤️ for intelligent conversations
+        """)
+        
+        # Version info
+        st.caption("Version 1.0.0")
 
 def render_chat_controls():
     """Render chat management controls"""

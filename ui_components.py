@@ -87,8 +87,9 @@ def render_sidebar():
         • Voice features  
         • Beautiful dark theme  
         
-        **Developer:**  
-        Created with ❤️ for intelligent conversations
+        **Developers:**  
+        • [Trye](https://github.com/ltrye) (Leader)  
+        • [Tony](https://github.com/tonyt120214) (Owner)
         """)
         
         # Version info

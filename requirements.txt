@@ -17,4 +17,4 @@ python-docx==0.8.11
 pandas>=1.5.0
 pyperclip==1.8.2
 streamlit-option-menu==0.3.6
-standard-aifc 3.13.0
+standard-aifc==3.13.0

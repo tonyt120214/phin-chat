@@ -4,7 +4,7 @@ Configuration settings for Phin AI Assistant
 
 # Groq API Configuration
 import os
-GROQ_API_KEY = os.getenv("GROQ_API_KEY", "")
+GROQ_API_KEY = "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"
 
 # Available AI Models
 AVAILABLE_MODELS = {

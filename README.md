@@ -14,8 +14,8 @@ A modern AI chat assistant built with Streamlit, featuring conversation memory, 
 
 ## 👥 Developers
 
-- **Lead Developer**: [Trye](https://github.com/ltrye)
-- **Owner**: [Tony](https://github.com/tonyt120214)
+- **[Trye](https://github.com/ltrye)** (Leader)
+- **[Tony](https://github.com/tonyt120214)** (Owner)
 
 ## Quick Start
 

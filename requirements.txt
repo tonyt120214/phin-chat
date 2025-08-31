@@ -1,7 +1,7 @@
 httpx==0.28.1
 groq==0.31.0
 streamlit==1.49.1
-ddgs==9.0.0
+duckduckgo_search==8.1.1
 iso639-lang==2.6.3
 rfc3986==2.0.0
 certifi>=2025.6.15
@@ -17,4 +17,4 @@ python-docx==0.8.11
 pandas>=1.5.0
 pyperclip==1.8.2
 streamlit-option-menu==0.3.6
-standard-aifc==3.13.0
+standard-aifc 3.13.0

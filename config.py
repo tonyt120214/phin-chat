@@ -4,7 +4,15 @@ Configuration settings for Phin AI Assistant
 
 # Groq API Configuration
 import os
-GROQ_API_KEY = "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"
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
+
+# Get API key from environment variable
+GROQ_API_KEY = os.getenv('GROQ_API_KEY')
+if not GROQ_API_KEY:
+    raise ValueError("GROQ_API_KEY environment variable is not set")
 
 # Available AI Models
 AVAILABLE_MODELS = {

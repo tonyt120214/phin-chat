@@ -10,17 +10,19 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Get API key from environment variable
-GROQ_API_KEY = os.getenv('GROQ_API_KEY')
+try:
+    # Try to get from environment variable first
+    GROQ_API_KEY = os.environ['GROQ_API_KEY']
+except KeyError:
+    # Fallback to .env file
+    from dotenv import load_dotenv
+    load_dotenv()
+    GROQ_API_KEY = os.getenv('GROQ_API_KEY')
+    
 if not GROQ_API_KEY:
     raise ValueError("""
     Error: GROQ_API_KEY environment variable is not set.
-    Please create a .env file with your API key:
-    
-    1. Create a file named '.env' in your project root
-    2. Add: GROQ_API_KEY=your_api_key_here
-    3. Save the file
-    
-    For production (e.g., Render), set the environment variable in your deployment settings.
+    Please set it in your environment or .env file.
     """)
 
 # Simple API key validation

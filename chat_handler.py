@@ -18,6 +18,32 @@ def handle_chat_input(prompt):
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.write(prompt)
+    
+    # Check for golden misheard lyrics request
+    if any(phrase in prompt.lower() for phrase in ["golden misheard lyrics", "misheard lyrics", "misheard song"]):
+        lyrics = """I was a ghost i was a loan
+(hah)
+Double chin
+(hah)
+U So gay
+(ahhhhhh)
+given the throne 
+eye didnt know
+(hoe)
+to be leaf
+EYE was a queen that im meant to bee
+i live 2 lie
+try to paint both sides
+EYe couldn't find my own face
+caught a problem child
+Cuz i got 2 wilds
+BUTT 
+now thats how im get in pain
+with a cheese on stage"""
+        st.session_state.messages.append({"role": "assistant", "content": lyrics})
+        with st.chat_message("assistant"):
+            st.write(lyrics)
+        return
 
     # Get AI response
     try:

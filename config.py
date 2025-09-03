@@ -23,13 +23,9 @@ if not GROQ_API_KEY:
     For production (e.g., Render), set the environment variable in your deployment settings.
     """)
 
-# Verify the API key is not the default one
-default_key = "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"
-if GROQ_API_KEY == default_key:
-    raise ValueError("""
-    Error: Default API key detected.
-    Please replace 'your_api_key_here' with your actual Groq API key in the .env file.
-    """)
+# Simple API key validation
+if not GROQ_API_KEY or not GROQ_API_KEY.startswith('gsk_'):
+    raise ValueError("Invalid or missing GROQ_API_KEY. Please check your environment variables.")
 
 # Available AI Models
 AVAILABLE_MODELS = {

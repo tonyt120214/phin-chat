@@ -9,7 +9,12 @@ from ui_components import (
     render_voice_input, render_chat_messages, auto_save_chat
 )
 from chat_handler import handle_chat_input, handle_voice_input
-from config import PAGE_TITLE, PAGE_ICON, LAYOUT, AVAILABLE_MODELS, DEFAULT_SYSTEM_PROMPT
+from config import PAGE_TITLE, PAGE_ICON, LAYOUT, AVAILABLE_MODELS, DEFAULT_SYSTEM_PROMPT, GROQ_API_KEY
+import os
+
+# Debug: Print environment variables and API key status
+print("Environment Variables:", os.environ)
+print("GROQ_API_KEY loaded:", "YES" if GROQ_API_KEY else "NO")
 
 # Initialize session state
 def init_session_state():

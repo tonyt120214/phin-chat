@@ -12,7 +12,24 @@ load_dotenv()
 # Get API key from environment variable
 GROQ_API_KEY = os.getenv('GROQ_API_KEY')
 if not GROQ_API_KEY:
-    raise ValueError("GROQ_API_KEY environment variable is not set")
+    raise ValueError("""
+    Error: GROQ_API_KEY environment variable is not set.
+    Please create a .env file with your API key:
+    
+    1. Create a file named '.env' in your project root
+    2. Add: GROQ_API_KEY=your_api_key_here
+    3. Save the file
+    
+    For production (e.g., Render), set the environment variable in your deployment settings.
+    """)
+
+# Verify the API key is not the default one
+default_key = "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"
+if GROQ_API_KEY == default_key:
+    raise ValueError("""
+    Error: Default API key detected.
+    Please replace 'your_api_key_here' with your actual Groq API key in the .env file.
+    """)
 
 # Available AI Models
 AVAILABLE_MODELS = {
